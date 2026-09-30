@@ -1,0 +1,67 @@
+
+.contact-section {
+  padding: 10rem 5%;
+  background: var(--ground-deep);
+  border-top: 1px solid var(--glass-border);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.contact-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 500px;
+  background: radial-gradient(circle at top, rgba(255, 74, 0, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-container .section-label {
+  display: inline-block;
+}
+
+.contact-heading {
+  font-size: clamp(3rem, 6vw, 5rem);
+  margin-bottom: 2rem;
+  color: var(--ink);
+}
+
+.contact-desc {
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  margin-bottom: 4rem;
+  line-height: 1.6;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

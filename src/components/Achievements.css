@@ -1,0 +1,75 @@
+
+.achievements-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.achievements-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.achievement-card {
+  position: relative;
+  padding: 3rem 2rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  background: var(--glass-hover);
+  border-color: var(--ink-faint);
+}
+
+.achievement-number {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-family: var(--font-display);
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--ink-ghost);
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.achievement-content {
+  position: relative;
+  z-index: 1;
+  margin-top: 2rem;
+}
+
+.achievement-content h3 {
+  font-size: 1.2rem;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.achievement-content p {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.education-block {
+  padding: 4rem 0;
+  border-top: 1px solid var(--glass-border);
+  text-align: center;
+}
+
+.education-block h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--ink);
+  font-weight: 400;
+}
